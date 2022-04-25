@@ -1,0 +1,229 @@
+<html>
+<head>
+	<title>FeedBack</title>
+<style>
+a{font:-size:12pt;color:880000;text-decoration:none;}
+a:hover{font:bold;color:004080}
+</style>
+
+<script language="javascript">
+
+
+ function emptycheck()
+ 
+{ 
+	if(document.feedbackform.na.value.length=="")
+	 {
+	  alert("Name is required")
+	  document.feedbackform.na.focus()
+	  return false;
+	 }
+	 else
+
+	if(document.feedbackform.em.value.length=="")
+	 {
+	  alert("E-mail is required")
+	  document.feedbackform.em.focus()
+	  return false;
+	 }
+
+	 else
+
+	if(document.feedbackform.com.value.length=="")
+	{
+	alert("Comments  are required")
+	document.feedbackform.com.focus()
+	return false;
+	}
+
+	
+	else
+	return true	
+
+}
+
+
+function alphacheckna()
+{
+	alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+	alphastr=feedbackform.na.value
+	allvalid=true
+	for(i=0;i<alphastr.length;i++)
+	{
+                       ch=alphastr.charAt(i)
+		for(j=0;j<alpha.length;j++)
+		if(ch==alpha.charAt(j))
+	break;
+
+			if(j==alpha.length)
+			{
+				allvalid=false
+				break;
+			}	
+	} if(!allvalid)
+
+	{
+		alert("Enter only Aplhabets")
+		feedbackform.na.value=""
+		feedbackform.na.focus()
+	}
+	return(true);
+}
+
+
+
+
+</script>
+
+
+
+</head>
+
+<body bgcolor=ebebeb>
+
+<table bgcolor=ff9900 border=0  align=center>
+<TR> 
+   <TD vAlign=center  align=right colSpan=2>
+
+     <A href="contactus\contactus.html">Contact Us</A> |
+     <A href="facultyfaq\faq.html">Faqs</A> |   
+  
+     </TD>
+</TR>
+
+<tr>
+<td><img src=images\feed_banner.jpg></td></tr>
+</table>
+
+<table align="center" border="0">
+<tr>
+
+<td>
+<table cellspacing="1"  border="0">
+<tr>
+<td bgcolor="ff9900"  width="165"><a href="index.html">&nbspHome</a></td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="ff9900"  width="165">&nbsp<a href="On_line Application.html">Apply Online</a></td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="ff9900"  width="165"><a href="prospectivestudent.html">&nbspProspective Student&nbsp&nbsp&nbsp&nbsp</a></td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="ff9900" width="165"><a href="currentstudent.html">&nbspCurrent Student&nbsp&nbsp&nbsp&nbsp</a></td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="ff9900" width="165"><a href="studentlife.html">&nbspStudent Services&nbsp&nbsp&nbsp&nbsp</a></td>
+</td>
+</tr>
+
+<tr><td bgcolor="ff9900" width="165">&nbsp<a href ="images\Degree_and_Diploma_Form.pdf" target="_blank">Download Application</a>&nbsp&nbsp&nbsp&nbsp</td></tr>
+     
+<tr>
+<td bgcolor="ff9900">&nbsp<a href="facultyfaq\faculty.html">Faculty/staff&nbsp&nbsp&nbsp&nbsp</a></td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="ff9900"><a href="coursesdcs.html">&nbspCourses&nbsp&nbsp&nbsp&nbsp</a></td>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=ff9900><br><br><br><br><br><br><br><br><br><br></td>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<form name=feedbackform ACTION="thanks\thanks.html"  onsubmit="return emptycheck()">
+<table border="0" cellspacing="0">
+<tr>
+<td>
+<h2>
+<font color="Gray">Beaconhouse Informatics FeedBack Form</font>
+</h2>
+</td>
+</tr>
+<tr>
+<td>
+<p><font color="880000">We're always looking for information from you. Please send us any comments you may have.<br>
+If you desire a response, be sure to provide your name or e-mail address. Thank you.</font></p>
+</td>
+</tr>
+	    
+                             <tr>
+		<td>
+	                         <b>Name</b>
+	 	</td>
+	            </tr> 
+        <tr>
+	<td>
+                      <input type=text name=na size="20" maxlength="20" onBlur="alphacheckna()">	
+                  </td>
+       </tr>
+                  <tr> 
+                            <td>
+		<b>From:</b>(E-mail Address)	
+                             </td> 
+                   </tr> 
+
+      <tr>
+          <td>	
+               <input type=text name=em size="35" maxlength="35">       
+           </td>  
+       </tr>
+
+ <tr>
+    <td>	
+          <textarea  name=com cols="30" rows="10" maxlength=300>
+          </textarea>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <input type="submit" value="Send My Comments">
+         <input type="Reset" value="Reset">
+    </td>
+</tr>
+
+</table>
+</td>
+
+</tr>
+</table>
+
+</form>
+
+
+
+
+<table align="center" border=0>
+<tr>
+<td align="center">
+          <a href="index.html">|Home|</a>
+          <a href="contactus\contactus.html">|Contact Us|</a>
+          <a href="about.html">|About Us|</a> |FeedBack|
+</td>
+</tr>
+
+ <tr>
+   <td> 
+     <b>    Copyright © 2005 Beaconhouse Informatics Business School. All rights reserved  </b>
+ </td>
+</tr>
+
+</table>
+
+</body>
+</html>

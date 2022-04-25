@@ -1,0 +1,596 @@
+<HTML>
+
+ <HEAD>
+
+  <TITLE>HOME PAGE</TITLE>
+
+<style>
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+
+
+ <script language="javascript">
+ 
+ function emptycheck()
+ 
+{ 
+if(document.form_prospectus.LN.value=="")
+ {
+  alert("Last name is required")
+  document.form_prospectus.LN.focus()
+  return false;
+ }
+ else
+if(document.form_prospectus.FN.value=="")
+ {
+  alert("First name is required")
+  document.form_prospectus.FN.focus()
+  return false;
+ }
+
+ else
+if(document.form_prospectus.GN.selectedIndex=="0")
+ {
+  alert("Gender is required")
+  document.form_prospectus.GN.focus()
+  return false;
+ }
+ else 
+if(document.form_prospectus.AL1.value=="")
+ {
+  alert("Address is required")
+  document.form_prospectus.AL1.focus()
+  return false;
+ }
+ else
+if(document.form_prospectus.CN.selectedIndex=="0")
+
+ {
+  alert("Country is required")
+  document.form_prospectus.CN.focus()
+  return false;
+ }
+ else
+if(document.form_prospectus.CT.value=="")
+
+ {
+  alert("City is required")
+  document.form_prospectus.CT.focus()
+  return false;
+ }
+ else
+if(document.form_prospectus.EM.value=="")
+
+ {
+  alert("E-mail is required")
+  document.form_prospectus.EM.focus()
+  return false;
+ }
+ else
+
+if(document.form_prospectus.HT.value=="")
+
+ {
+  alert("Telephone is required")
+  document.form_prospectus.HT.focus()
+  return false;
+ }
+ 
+else
+return true
+}
+ 
+ 
+ 
+function alphacheckLN()
+{
+	alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	alphastr=form_prospectus.LN.value
+	allvalid=true
+	for(i=0;i<alphastr.length;i++)
+	{
+                       ch=alphastr.charAt(i)
+		for(j=0;j<alpha.length;j++)
+		if(ch==alpha.charAt(j))
+	break;
+
+			if(j==alpha.length)
+			{
+				allvalid=false
+				break;
+			}	
+	} if(!allvalid)
+
+	{
+		alert("Enter only Aplhabets Spaces are not Allowed")
+		form_prospectus.LN.value=""
+		form_prospectus.LN.focus()
+	}
+	return(true);
+}
+
+
+
+
+
+function alphacheckFN()
+{
+	alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	alphastr=form_prospectus.FN.value
+	allvalid=true
+	for(i=0;i<alphastr.length;i++)
+	{
+                       ch=alphastr.charAt(i)
+		for(j=0;j<alpha.length;j++)
+		if(ch==alpha.charAt(j))
+	break;
+
+			if(j==alpha.length)
+			{
+				allvalid=false
+				break;
+			}	
+	} if(!allvalid)
+
+	{
+		alert("Enter only Aplhabets  Spaces are not Allowed")
+		form_prospectus.FN.value=""
+		form_prospectus.FN.focus()
+	}
+	return(true);
+}
+
+
+
+function alphacheckFMN()
+{
+	alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	alphastr=form_prospectus.FMN.value
+	allvalid=true
+	for(i=0;i<alphastr.length;i++)
+	{
+                       ch=alphastr.charAt(i)
+		for(j=0;j<alpha.length;j++)
+		if(ch==alpha.charAt(j))
+	break;
+
+			if(j==alpha.length)
+			{
+				allvalid=false
+				break;
+			}	
+	} if(!allvalid)
+
+	{
+		alert("Enter only Aplhabets Spaces are not Allowed")
+		form_prospectus.FMN.value=""
+		form_prospectus.FMN.focus()
+	}
+	return(true);
+}
+
+
+
+
+function alphacheckCT()
+{
+	alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	alphastr=form_prospectus.CT.value
+	allvalid=true
+	for(i=0;i<alphastr.length;i++)
+	{
+                       ch=alphastr.charAt(i)
+		for(j=0;j<alpha.length;j++)
+		if(ch==alpha.charAt(j))
+	break;
+
+			if(j==alpha.length)
+			{
+				allvalid=false
+				break;
+			}	
+	} if(!allvalid)
+
+	{
+		alert("Enter only Aplhabets Spaces are not Allowed")
+		form_prospectus.CT.value=""
+		form_prospectus.CT.focus()
+	}
+	return(true);
+}
+
+
+ function numberscheckPS()
+{
+numbers="0123456789 "
+numbersstr=form_prospectus.PS.value
+allvalid=true
+for(i=0;i<numbersstr.length;i++)
+{
+nu=numbersstr.charAt(i)
+for(j=0;j<numbers.length;j++)
+if (nu==numbers. charAt(j))
+break;
+			if(j==numbers.length)
+			{
+				allvalid=false
+				break;
+			}	
+	} if(!allvalid)
+
+	{
+		alert("Enter only Numbers")
+		form_prospectus.PS.value=""
+		form_prospectus.PS.focus()
+	}
+	return(true);
+}
+
+
+ function numberscheckHT()
+{
+	numbers="0123456789 "
+	numbersstr=form_prospectus.HT.value
+	allvalid=true
+	for(i=0;i<numbersstr.length;i++)
+      {
+	nu=numbersstr.charAt(i)
+	for(j=0;j<numbers.length;j++)
+	if (nu==numbers. charAt(j))
+	break;
+			if(j==numbers.length)
+			{
+				allvalid=false
+				break;
+			}	
+      } if(!allvalid)
+
+	{
+		alert("Enter only Numbers")
+		form_prospectus.HT.value=""
+		form_prospectus.HT.focus()
+	}
+	return(true);
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+<style>
+a{font:bold;color="#004080"}
+td{font:bold;color:"#004080"}
+</style>
+
+</HEAD>
+
+   <BODY bgcolor="#ebebeb">
+ 
+<table align=center border="0">
+<tr>
+<td width="415">&nbsp</td>
+<td><a href="facultyfaq\faq.html">Faqs</td> 
+<td><a href="feedback.html">|FeedBack|</a></td>
+<td><a href="about.html">About Us|</a></td>
+<td><a href="contactus\contactus.html">ContactUs|</a></td>
+</tr>
+</table>
+
+
+
+
+<table align="center">
+<tr><td align=center> <img src="images\becon.bmp" alt="Discover Active Learning here Logo"></td> </tr>
+</table> 
+
+<table  border="0" cellspacing=0 align="center">
+
+
+<tr>
+
+<td><table border="0">
+<tr><td bgcolor="#ADBDE7"><a href="index.html">&nbspHome</a></td></tr>
+<tr><td bgcolor="#ADBDE7">&nbsp<a href ="On_line Application.html">Apply Online</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><a href="coursesdcs.html">&nbspCourses</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><a href="campus\campusservice.html">&nbspCampus Services</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><a href="currentstudent.html">&nbspCurrent Student</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><a href="prospectivestudent.html">&nbspProspective Students&nbsp&nbsp</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><a href="library.html">&nbspLibrary</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><a href="facultyfaq\faculty.html">&nbspFaculty/Staff</a></td></tr>
+<tr><td bgcolor="#ADBDE7"><br><br><br><br><br><br><br><br><br><br><br><br><br></td></tr>
+</table></td>
+
+
+
+
+
+
+
+
+
+
+<td bgcolor="#ADBDE7">
+<table align="center" cellpadding="0" cellspacing="0" border="0" >
+
+ 
+<tr><td align="center"><b><i>
+Request for Information/ProspectusComplete this form <br>and you will be mailed information/prospectus about your areas of interest</i></b></td></tr>
+ 
+<tr>
+
+ 
+                <td> <FORM NAME="form_prospectus"  ACTION="thanks\thanks.html" onsubmit="return emptycheck()"> 
+                  <table cellpadding="0" align="center" border="0" bgcolor="#ADBDE7">
+ <tr>
+     <td align="right"><b>Title</b></td>
+ 
+            <td> 
+                        <input type="radio" name="m">
+ 
+ <b>Mr.</b>
+ 
+ <input type="radio" name="m">
+ 
+ <b>Miss.</b>
+  
+ <input type="radio" name="m">
+ 
+ <b>Mrs.</b>
+</td>
+</tr>
+ 
+<tr>
+                   <td align="right"><b>Last Name</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="LN" onBlur="alphacheckLN()" maxlength="8"></td>
+</tr>
+
+<tr>
+                   <td align="right"><b>First Name</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="FN" onBlur="alphacheckFN()" maxlength="8"></td>
+</tr>
+ 
+<tr>
+                <td align="right"><b>Family Name</b></td> 
+                <td> 
+                        <INPUT TYPE="TEXT" NAME="FMN" maxlength="8" onBlur="alphacheckFMN()"></td>
+</tr>
+ 
+
+<tr>
+                <td align="right"><b>Gender</b></td> 
+                <td> 
+   <select name="GN">
+  <option>----------</option>
+  <option>Male</option>
+  <option>Female</option>
+     </select>
+ </td>
+</tr>
+
+<tr>
+                   <td align="right"><b>Address-Line 1</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="AL1" size="50" maxlength="50"></td>
+</tr>
+ 
+<tr>
+                   <td align="right"><b>Line-2</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="AL2" size="50" maxlength="50"></td>
+</tr>
+
+<tr>
+                   <td align="right"><b>Line-3</b></td> 
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="AL3" size="50" maxlength="50"></td>
+</tr>
+ 
+<tr>
+                   <td align="right"><b>Country</b></td>
+                   <td> 
+                        <select name="CN">
+<option>-------</option>
+<option>Afghanistan</option>
+<option>Austria</option>
+<option>Azerbaijan</option>
+<option>Bahamas</option>
+<option>Bahrain</option>
+<option>Bangladesh</option>
+<option>Belgium</option>
+<option>Beoptionze</option>
+<option>Bhutan</option>
+<option>Brazil</option>
+<option>Brunei</option>
+<option>Canada</option>
+<option>China </option>
+<option>Colombia</option>
+<option>Cuba</option>
+<option>Cyprus</option>
+<option>Denmark</option>
+<option>Egypt</option>
+<option>Finland</option>
+<option>France</option>
+<option>Georgia</option>
+<option>Germany</option>
+<option>Gibraltar</option>
+<option>Greece</option>
+<option>Greenland</option>
+<option>Grenada</option>
+<option>Guatemala</option>
+<option>Guinea</option>
+<option>Guinea-Bissau</option>
+<option>Guyana</option>
+<option>Haiti</option>
+<option>Honduras</option>
+<option>Hong Kong</option>
+<option>Hungary</option>
+<option>Iceland</option>
+<option>India</option>
+<option>Indonesia</option>
+<option>Iran. Also Persia</option>
+<option>Iraq</option>
+<option>Irish </option>
+<option>Italy</option>
+<option>Japan</option>
+<option>Jordan</option>
+<option>Kazakhstan</option>
+<option>Kenya</option>
+<option>Kuwait</option>
+<option>Kyrgyzstan</option>
+<option>Lebanon</option>
+<option>Malaysia</option>
+<option>Maldives</option>
+<option>Malta</option>
+<option>Mauritius</option>
+<option>Mexico</option>
+<option>Namibia</option>
+<option>Nepal</option>
+<option>Netherlands</option>
+<option>New Zealand</option>
+<option>Nigeria</option>
+<option>North Korea</option>
+<option>Norway</option>
+<option>Oman</option>
+<option selected>Pakistan</option>
+<option>Palestine</option>
+<option>Poland</option>
+<option>Qatar</option>
+<option>Russia</option>
+<option>Saudi Arabia</option>
+<option>Scotland</option>
+<option>Singapore</option>
+<option>South Africa</option>
+<option>South Korea</option>
+<option>Spain</option>
+<option>Sri Lanka</option>
+<option>Sudan</option>
+<option>Sweden</option>
+<option>Switzerland</option>
+<option>Syria</option>
+<option>Taiwan</option>
+<option>Tajikistan</option>
+<option>Thailand</option>
+<option>Turkey</option>
+<option>UK</option>
+<option>Ukraine</option>
+<option>United Arab Emirates</option>
+<option>United States</option>
+<option>Uzbekistan</option>
+<option>West Indies</option>
+<option>Yemen</option>
+<option>Zambia</option>
+<option>Zimbabwe</option>
+<option>other</option>
+ </select>
+ </td>
+</tr>
+
+<tr>
+                   <td align="right"><b>City</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="CT" onBlur="alphacheckCT()" maxlength="14"></td>
+</tr>
+
+<tr>
+                   <td align="right"><b>Postal Code</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="PS" maxlength="10" onBlur="numberscheckPS()"></td>
+</tr>
+ 
+
+<tr>
+                   <td align="right"><b>E-mail Address</b></td>
+                   <td> 
+                        <INPUT TYPE="TEXT" NAME="EM" maxlength="50"></td>
+</tr>
+  
+<tr>
+                   <td align="right"><b>Home Telephone</b> </td>
+                  
+ <td> 
+                        <INPUT TYPE="TEXT" NAME="HT" maxlength="18" onBlur="numberscheckHT()"></td>
+</tr>
+
+<tr>
+                   <td><b>Please tell us how you found<br> out about our website</b></td>
+                   <td> 
+                        <select name="comments">
+ 
+<option>--------------------------------</option>
+<option>Advice centre</option>                    
+<option>Bus advertisement</option>
+<option>British Council</option>             
+<option>Cinema advertisement</option>                 
+<option>Friend/colleague (word of mouth)</option>
+<option>Guardian</option>
+<option>Independent</option>
+<option>Learn Direct</option>
+<option>Other</option>
+<option>Other Course Directory</option>
+<option>Magazine</option>
+<option>Newspaper</option>
+<option>Radio</option>
+<option>Search engines (eg Google, Altavista, Yahoo,Lycos)</option>
+<option>Timeout</option>
+<option>World Wide Web</option>
+  
+  </select>
+ </td>
+</tr>
+<tr>
+<td></td>
+                   <td align="left"> 
+                        <input type="submit" value="Submit request">
+
+                        <input type="reset" value="Reset"></td>
+</tr>
+ 
+                  </form>
+                    </table>
+ </td>
+</tr>
+ 
+
+</table>
+ 
+
+</td>
+</tr>
+</table>
+ 
+ 
+ 
+   </table>
+
+<table align=center border="0">
+
+<tr><td align=center>
+
+<a href="index.html">|Home|</a>
+<a href="contactus\contactus.html">|Contact Us|</a>
+<a href="about.html">|About Us|</a>
+<a href="feedback.html">|FeedBack|</a>
+</td>
+</tr>
+<tr >
+<td >
+<img src="images\icon.gif">   
+<b> Copyright © 2005 Beaconhouse Informatics Business School. All rights reserved </b>
+</td>
+</tr>
+<TR><TD ALIGN=CENTER>UAN:-(0092)111-100-123</TD></TR>
+<TR><TD ALIGN=CENTER><a href="mailto:info@informatics.edu.pk">info@informatics.edu.pk</a></TD></TR>
+</table>
+
+
+</BODY>
+</HTML>
